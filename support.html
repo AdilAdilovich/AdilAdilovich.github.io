@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1428">
+<meta name="description" content="Official Firefly game support.">
+<title>Support | Firefly</title>
+
+<style>
+:root {
+  --bg: #0b1428;
+  --panel: #14233d;
+  --gold: #edc477;
+  --light: #f8e7c5;
+  --muted: #b7c2d3;
+  --border: #947c50;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--light);
+  background:
+    radial-gradient(
+      ellipse at 50% 10%,
+      #30486b,
+      transparent 55%
+    ),
+    linear-gradient(180deg, #121e36, var(--bg));
+  font-family: "Courier New", monospace;
+  line-height: 1.7;
+}
+
+.container {
+  width: min(calc(100% - 32px), 880px);
+  margin: auto;
+}
+
+a {
+  color: var(--gold);
+  overflow-wrap: anywhere;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-size: 14px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  text-align: center;
+  padding: 65px 0 40px;
+}
+
+.symbol {
+  display: inline-grid;
+  place-items: center;
+  width: 90px;
+  height: 90px;
+  border: 3px solid var(--border);
+  background: var(--panel);
+  color: var(--gold);
+  font-size: 52px;
+  box-shadow: 0 0 35px #edc47730;
+}
+
+h1 {
+  color: var(--gold);
+  font-size: clamp(36px, 7vw, 60px);
+  margin: 20px 0 12px;
+}
+
+.subtitle {
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.languages {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin: 30px 0;
+}
+
+.languages a {
+  border: 2px solid var(--border);
+  background: var(--panel);
+  padding: 10px 22px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.section {
+  margin: 30px 0 55px;
+  padding: 30px;
+  border: 2px solid var(--border);
+  background: #14233de8;
+  box-shadow: inset 0 0 0 5px var(--bg);
+  scroll-margin-top: 24px;
+}
+
+.section h2 {
+  color: var(--gold);
+  font-size: 27px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 14px;
+}
+
+.section h3 {
+  color: var(--gold);
+  margin: 28px 0 10px;
+  font-size: 19px;
+}
+
+.section p {
+  color: var(--muted);
+}
+
+.contact {
+  text-align: center;
+  padding: 30px 15px;
+  margin: 24px 0;
+  border: 2px solid var(--border);
+  background: var(--bg);
+}
+
+.contact-icon {
+  font-size: 40px;
+  color: var(--gold);
+}
+
+.email {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: clamp(13px, 2.5vw, 18px);
+  font-weight: bold;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 22px;
+  margin-top: 20px;
+  background: var(--gold);
+  color: var(--bg);
+  text-decoration: none;
+  font-weight: bold;
+  border: 3px solid #f8e7c5;
+  box-shadow: 5px 5px 0 #070e1c;
+}
+
+.faq {
+  margin: 18px 0;
+  padding: 20px;
+  border: 1px solid #756949;
+  background: #101b31;
+}
+
+.faq h3 {
+  margin: 0 0 10px;
+}
+
+.faq p {
+  margin: 0;
+}
+
+.note {
+  padding: 16px;
+  background: #0b1428;
+  border-left: 3px solid var(--gold);
+}
+
+footer {
+  text-align: center;
+  padding: 30px 0 45px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+footer a {
+  margin: 0 10px;
+}
+
+@media (max-width: 650px) {
+  header {
+    flex-direction: column;
+  }
+
+  .hero {
+    padding: 45px 0 20px;
+  }
+
+  .section {
+    padding: 22px 18px;
+  }
+
+  .contact {
+    padding: 24px 12px;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+  <a class="brand" href="/">✦ Firefly</a>
+
+  <nav>
+    <a href="/">Home</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/support.html">Support</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="symbol">✦</div>
+
+  <h1>Firefly Support</h1>
+
+  <p class="subtitle">
+    Need a little help finding your way
+    through the light? We're here to help.
+  </p>
+
+  <div class="languages">
+    <a href="#english">English</a>
+    <a href="#russian">Русский</a>
+  </div>
+</section>
+
+<!-- ENGLISH -->
+
+<section class="section" id="english" lang="en">
+
+<h2>Support — English</h2>
+
+<p>
+Welcome to the official support page
+for Firefly, a cozy pixel-art puzzle
+game for iPhone.
+</p>
+
+<h3>Contact Support</h3>
+
+<div class="contact">
+  <div class="contact-icon">✉</div>
+
+  <p>
+    Questions, technical issues,
+    purchase problems or feedback?
+  </p>
+
+  <a class="email"
+     href="mailto:firefly.puzzle.support@gmail.com">
+    firefly.puzzle.support@gmail.com
+  </a>
+
+  <p>
+    You can contact us in English or Russian.
+  </p>
+
+  <a class="button"
+     href="mailto:firefly.puzzle.support@gmail.com?subject=Firefly%20Support">
+    Send an Email
+  </a>
+</div>
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <h3>How do I play Firefly?</h3>
+  <p>
+    Tap the puzzle cells to change the
+    pattern of lights. Each cell may
+    affect neighboring cells according
+    to its symbol. Complete the
+    objective within the available moves.
+  </p>
+</div>
+
+<div class="faq">
+  <h3>How do hints work?</h3>
+  <p>
+    Each level provides three free hints.
+    Additional hints can be earned by
+    voluntarily watching a rewarded ad,
+    when advertising is available.
+  </p>
+</div>
+
+<div class="faq">
+  <h3>What is Firefly Premium?</h3>
+  <p>
+    Firefly Premium is an optional
+    one-time in-app purchase that removes
+    advertisements and unlocks
+    unlimited hints.
+  </p>
+</div>
+
+<div class="faq">
+  <h3>How can I restore my purchase?</h3>
+  <p>
+    Open Firefly settings and select
+    Restore Purchases.
+    Make sure you are using the Apple
+    Account associated with the purchase.
+  </p>
+</div>
+
+<div class="faq">
+  <h3>What if an advertisement is unavailable?</h3>
+  <p>
+    Ad availability may depend on your
+    internet connection, region and
+    advertising service availability.
+    You can continue playing without
+    watching an ad.
+  </p>
+</div>
+
+<div class="faq">
+  <h3>How can I request a refund?</h3>
+  <p>
+    Purchases are processed by Apple.
+    To request a refund, visit
+    <a href="https://reportaproblem.apple.com/">
+      Apple's Report a Problem website
+    </a>.
+    Refund eligibility is determined by Apple.
+  </p>
+</div>
+
+<div class="faq">
+  <h3>Is an internet connection required?</h3>
+  <p>
+    Core puzzle gameplay is designed
+    to work offline.
+    Advertising, purchases, Game Center
+    and online services may require
+    an internet connection.
+  </p>
+</div>
+
+<h3>Reporting a Problem</h3>
+
+<p>
+When contacting support, please include
+the following information if relevant:
+</p>
+
+<p class="note">
+  Your iPhone model, iOS version,
+  Firefly app version, level number
+  and a brief description of the issue.
+  Screenshots may also help.
+  Never send passwords or payment card details.
+</p>
+
+<h3>Privacy</h3>
+
+<p>
+Learn more about how Firefly handles data:
+<a href="/privacy.html">
+  Read our Privacy Policy
+</a>.
+</p>
+
+</section>
+
+<!-- RUSSIAN -->
+
+<section class="section" id="russian" lang="ru">
+
+<h2>Поддержка — Русский</h2>
+
+<p>
+Добро пожаловать на официальную страницу
+поддержки Firefly — уютной пиксельной
+головоломки для iPhone.
+</p>
+
+<h3>Связаться с поддержкой</h3>
+
+<div class="contact">
+  <div class="contact-icon">✉</div>
+
+  <p>
+    Возникли вопросы, ошибки, сложности
+    с покупкой или есть предложения?
+  </p>
+
+  <a class="email"
+     href="mailto:firefly.puzzle.support@gmail.com">
+    firefly.puzzle.support@gmail.com
+  </a>
+
+  <p>
+    Мы принимаем обращения
+    на русском и английском языках.
+  </p>
+
+  <a class="button"
+     href="mailto:firefly.puzzle.support@gmail.com?subject=Firefly%20Support">
+    Написать нам
+  </a>
+</div>
+
+<h2>Часто задаваемые вопросы</h2>
+
+<div class="faq">
+  <h3>Как играть в Firefly?</h3>
+  <p>
+    Нажимайте на клетки, чтобы менять
+    рисунок огоньков. Каждая клетка
+    влияет на другие в соответствии
+    со своим символом.
+    Выполните цель за доступное число ходов.
+  </p>
+</div>
+
+<div class="faq">
+  <h3>Как работают подсказки?</h3>
+  <p>
+    На каждом уровне доступны
+    три бесплатные подсказки.
+    Дополнительную подсказку можно
+    получить за добровольный просмотр
+    рекламы, если она доступна.
+  </p>
+</div>
+
+<div class="faq">
+  <h3>Что такое Firefly Premium?</h3>
+  <p>
+    Firefly Premium — необязательная
+    разовая покупка.
+    Она отключает рекламу и
+    предоставляет безлимитные подсказки.
+  </p>
+</div>
+
+<div class="faq">
+  <h3>Как восстановить покупку?</h3>
+  <p>
+    Откройте настройки Firefly и
+    выберите «Восстановить покупки».
+    Используйте Apple Account,
+    с которого была совершена покупка.
+  </p>
+</div>
+
+<div class="faq">
+  <h3>Почему реклама недоступна?</h3>
+  <p>
+    Доступность рекламы зависит от
+    интернет-соединения, региона и
+    работы рекламного сервиса.
+    Продолжать играть можно и без рекламы.
+  </p>
+</div>
+
+<div class="faq">
+  <h3>Как запросить возврат денег?</h3>
+  <p>
+    Покупки обрабатываются компанией Apple.
+    Для запроса возврата перейдите на
+    <a href="https://reportaproblem.apple.com/">
+      сайт Apple Report a Problem
+    </a>.
+    Решение о возврате принимает Apple.
+  </p>
+</div>
+
+<div class="faq">
+  <h3>Нужен ли интернет?</h3>
+  <p>
+    Основные головоломки рассчитаны
+    на работу без интернета.
+    Для рекламы, покупок, Game Center
+    и онлайн-сервисов может
+    требоваться подключение.
+  </p>
+</div>
+
+<h3>Как сообщить об ошибке?</h3>
+
+<p>
+Если вы обнаружили проблему,
+при обращении в поддержку по возможности
+укажите:
+</p>
+
+<p class="note">
+  Модель iPhone, версию iOS,
+  версию Firefly, номер уровня
+  и краткое описание ошибки.
+  При необходимости приложите скриншот.
+  Не отправляйте пароли и данные банковских карт.
+</p>
+
+<h3>Конфиденциальность</h3>
+
+<p>
+Подробнее об обработке информации:
+<a href="/privacy.html">
+  Политика конфиденциальности Firefly
+</a>.
+</p>
+
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 Firefly. All rights reserved.</p>
+
+  <p>
+    <a href="/">Home</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="#english">English</a>
+    <a href="#russian">Русский</a>
+  </p>
+</footer>
+
+</div>
+</body>
+</html>
